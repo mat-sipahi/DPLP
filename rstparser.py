@@ -7,7 +7,7 @@ from code.evalparser import evalparser
 from cPickle import load
 import gzip, sys
 
-def main(path, draw=True):
+def main(path, draw=False):
     with gzip.open("resources/bc3200.pickle.gz") as fin:
         print 'Load Brown clusters for creating features ...'
         bcvocab = load(fin)

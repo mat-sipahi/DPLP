@@ -35,6 +35,22 @@ All the following commands will be run in a batch fasion, which means every comm
 
 TODO
 
+## 4. Run with docker
+
+You can use docker image `matsepahi/dplp-env` to run DPLP code. It contains all required softwares and packages preinstalled. 
+It is recommended to run the code by creatng a volume in the docker container, mapped to your local copy of DPLP code.
+The best volume path is `/home/` where `corenlp` is installed. You can use these commands:
+
+1. Prepare docker container (run just once)
+  - change directory to DPLP root path
+  - run a container:    docker run --rm -it -v ./:/home/DPLP -w /home/DPLP matsepahi/dplp-env sleep infinitely
+  - get containerid:    docker ps
+2. parse text 
+  - copy .txt files to a directory wthin DPLP root (for example: data)  
+  - run parser:          docker exec -it <containerid> myparser.sh data   
+
+
+
 ## Reference ##
 
 Please read the following paper for more technical details
