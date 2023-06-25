@@ -47,7 +47,7 @@ The best volume path is `/home/` where `corenlp` is installed. You can use these
   - get containerid:    docker ps
 2. parse text 
   - copy .txt files to a directory wthin DPLP root (for example: data)  
-  - run parser:          docker exec -it <containerid> myparser.sh data   
+  - run parser:          docker exec -it [containerid] ./myparser.sh data   
 
 
 
